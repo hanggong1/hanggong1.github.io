@@ -1,0 +1,1101 @@
+@charset "utf-8";
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    /* 폰트사이즈를 100로 하고 그걸 자손들에게 전부 적용시킴 */
+    /* font: size 100%;
+    font: inherit; */
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+
+#wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+
+
+/* *{box-sizing: boder-box;}
+body{font-family:'NanumSquareRound'; position: relative; font-weight: 500;} */
+
+@keyframes aniLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes aniRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+/****************************** TOP button ********************************/
+.topBtn{
+    position: fixed;
+    z-index: 999;
+    bottom: 7%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.topBtn .topBtn-a{
+    border-radius: 50%;
+    border: 2px solid #828282;
+    background-color: white;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.topBtn i{
+
+    font-size: 32px;
+
+    margin-left: 5px;
+
+    margin-right: 5px;
+
+    padding: 10px;
+
+}
+.topBtn p{
+    font-weight: 500;
+    font-size: 16px;
+    color: #828282;
+}
+
+/* 헤더부분 */
+header {
+    display: inline-block;
+
+    width: 100%;
+    height: 830px;
+
+    background-image: url(./img/header_back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+
+    color: white;
+}
+
+.header {
+    height: 100%;
+}
+
+.logo {
+    padding-top: 2%;
+}
+
+.text-box {
+    /* 요소를 자기 자신을 기준을 배치 */
+    position: relative;
+    height: 100%;
+}
+
+.hd-1 {
+    /* 부모 요소를 기준으로 배치 */
+    position: absolute;
+    top: 27%;
+    animation: aniLeft 3s;
+}
+
+.hd-1 p:first-child {
+    font-size: 50px;
+    font-weight: bolder;
+    line-height: 120%;
+}
+
+.hd-1 p:last-child {
+    margin-top: 30px;
+    word-break: normal;
+    width: 60%;
+}
+
+.hd-2 {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    animation: aniRight 3s;
+    animation-delay: 0.5s;
+}
+
+@media screen and (max-width: 1500px) {
+    .hd-2 {
+        right: 2%;
+    }
+}
+
+@media screen and (max-width: 1217px) {
+    .hd-1 p:last-child {
+        width: 100%;
+    }
+
+    .hd-1 p span {
+        display: block;
+    }
+
+    .hd-2 {
+        top: 11%;
+    }
+
+    .hd-img {
+        width: 580px;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    header {
+        height: 1000px;
+
+        background-image: url(./img/header_back_640.png);
+    }
+
+    .logo {
+        height: 45px;
+        margin-left: 15px;
+    }
+
+    .hd-1 {
+        top: 47%;
+        left: calc(50% - 210.5px);
+    }
+
+    .hd-1 p:first-child {
+        font-size: 35px;
+    }
+
+    .hd-2 {
+        left: 50%;
+        right: 0;
+        top: 3%;
+        transform: translateX(-50%);
+        width: 500px;
+    }
+
+    .hd-img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .logo {
+        height: 43px;
+    }
+
+    .hd-1 {
+        top: 39%;
+    }
+
+    .hd-2 {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .logo {
+        height: 40px;
+    }
+
+    .hd-2 {
+        width: 300px;
+    }
+}
+
+/* 카드 뒤집기 */
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.b_wrap {
+    padding: 200px 0;
+    overflow: hidden;
+}
+
+.b_wrap .busi_content_wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.b_wrap .business_list {
+    width: 100%;
+    display: flex;
+    list-style: none;
+}
+
+.b_wrap .business_list li a {
+    display: block;
+    position: relative;
+    text-align: center;
+    height: 100%;
+    transition: .2s;
+}
+
+.b_wrap .business_list li a .title {
+    font-size: 23px;
+    margin: 10px 0;
+    font-weight: 1000;
+    color: #2e2e2e;
+}
+
+.back.flip-item {
+    text-align: center;
+    line-height: 30px;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+}
+
+.user-wrap img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.app-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+
+}
+
+
+
+.subTitleEng {
+    text-transform: none;
+    text-align: center;
+    color: #ee72d8;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+.b_wrap .business_list li a .img_wrap {
+    position: relative;
+    width: 100%;
+    height: 185px
+}
+
+.b_wrap .business_list li a .img_wrap img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    text-align: center;
+}
+
+.b_wrap .busi_content_wrap .business_list .flip:first-child img {
+    width: 140px;
+}
+
+
+.b_wrap .business_list .flip {
+    box-sizing: border-box;
+    cursor: pointer;
+    width: calc(100% / 4 - 3%);
+    height: 350px;
+    position: relative;
+    margin: 0 1.5%;
+}
+
+.b_wrap .business_list .flip .flip-item {
+
+    backface-visibility: hidden;
+    background: #f6f6f6;
+    transition: 1s;
+    width: 100%;
+    height: 100%;
+}
+
+.b_wrap .business_list .flip .front {
+    position: absolute;
+    backface-visibility: hidden;
+    transition: 1s;
+    transform: rotateY(0deg);
+}
+
+.b_wrap .business_list .flip .front a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.b_wrap .business_list .flip .back {
+    transform: rotateY(-180deg);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.b_wrap .business_list .flip:hover .front {
+    transform: rotateY(180deg);
+}
+
+.b_wrap .business_list .flip:hover .back {
+    transform: rotateY(0deg);
+}
+
+
+
+/* 미디어쿼리  */
+
+
+
+@media screen and (max-width: 940px) {
+
+
+    .b_wrap {
+        padding: 100px;
+    }
+
+    .b_wrap .business_list {
+        flex-wrap: wrap;
+
+    }
+
+    .b_wrap .business_list .flip {
+        width: calc(100% / 2 - 4%);
+        margin: 2%;
+    }
+
+}
+
+/* 태블릿 */
+
+@media screen and (max-width: 768px) {
+
+    .main {
+        width: 100%;
+        margin: 0px auto 0;
+    }
+
+    .b_wrap {
+        max-width: 100%;
+        margin: 0 auto;
+        /* 중앙정렬  */
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .b_wrap .busi_content_wrap {
+        padding: 60px 20px;
+    }
+
+
+
+
+}
+
+
+@media screen and (max-width: 640px) {
+
+    .b_wrap .business_list .flip {
+        height: 300px;
+    }
+
+    .b_wrap .business_list .flip {
+        height: 250px;
+
+    }
+
+    .b_wrap .business_list li a .img_wrap {
+        height: 125px;
+    }
+
+    .b_wrap .business_list li a .img_wrap img {
+        width: 80px;
+    }
+
+    .b_wrap .busi_content_wrap .business_list .flip:first-child img {
+        width: 135px;
+    }
+
+    .b_wrap .business_list li a .title {
+        font-size: 22px;
+    }
+
+    .subTitleEng {
+        font-size: 14px;
+    }
+
+}
+
+/* 모바일 */
+
+@media screen and (max-width: 480px) {
+
+    .b_wrap .business_list li a .title {
+        font-size: 21px;
+    }
+
+    .subTitleEng {
+        font-size: 14px;
+    }
+
+    .b_wrap .business_list .flip {
+        width: 100%;
+        height: 250px;
+
+    }
+
+    .b_wrap .busi_content_wrap .flip:first-child li img {
+        width: 130px !important;
+        /* 나중에 설정한 값이 적용되지 않게 !important */
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/* 슬라이드 */
+.slide {
+    vertical-align: baseline;
+}
+
+.slide button {
+    outline: none;
+}
+
+.slide br {
+    opacity: 0;
+}
+
+.slide .news_wrap {
+    width: 100%;
+    padding: 80px 0;
+    background-color: #f8f8f8;
+}
+
+.slide .news_wrap .news_content_wrap {
+    max-width: 1500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slide .tit_center {
+    text-align: center;
+    float: none;
+}
+
+.slide .title .h_tit {
+    font-size: 42px;
+    font-weight: 600;
+    color: navy;
+}
+
+.slide .subTitleEng {
+    text-transform: uppercase;
+    text-align: center;
+    color: #ee72d8;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+.slide h2 {
+    font-size: 18px;
+    color: #272626;
+    font-weight: 600;
+    padding: 20px 0px;
+}
+
+.slide .container_slide {
+    max-width: 1400px;
+    margin: 55px auto;
+
+}
+
+.slide p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.slide .wrap {
+    width: 1440px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.slide .cont {
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    background-color: #fff;
+    margin: 0 10px;
+}
+
+.slide .logo {
+    margin: 0 auto;
+    width: 80%;
+    height: 40%;
+
+    transition: all 0.2s linear;
+}
+
+.slide .logo:hover {
+    transform: scale(1.2);
+    box-shadow: 0;
+}
+
+.slide .work-title {
+    height: 30%;
+    font-size: 20px;
+    color: #222;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+    line-height: 1.5;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.slide .cont p {
+    word-break: keep-all;
+}
+
+
+
+
+/* 에코 */
+.cus_wrap {
+    max-width: 1400px;
+    height: 1100px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 60px;
+    margin-bottom: 250px;
+    position: relative;
+    background-position: center;
+}
+
+.cus_wrap .ecoce-bot {
+    position: absolute;
+    top: 5%;
+    right: 0;
+    width: 740px;
+}
+
+.cus_wrap .ministry-Environ-img {
+    position: absolute;
+    right: 0;
+    top: 290px;
+    width: 350px;
+}
+
+.cus_wrap .ecoce-img-wrap {
+    position: relative;
+    height: 100%;
+    top: 160px;
+    width: 960px;
+}
+
+.cus_wrap .ecoce-img-wrap .ecoce-img {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.cus_wrap .eco-clean-earth {
+    position: absolute;
+    right: 0;
+    top: 830px;
+    text-align: right;
+    line-height: 45px;
+    margin-top: 50px;
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+
+.fadeInRight p {
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: right;
+}
+
+.fadeInRight p:first-child {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.fadeInRight p:last-child {
+    font-size: 30px;
+}
+
+.fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+}
+
+@media screen and (max-width: 1500px) {
+    .cus_wrap {
+        height: 60vw
+    }
+
+    .cus_wrap .ecoce-bot {
+        top: 5%;
+        width: 53%;
+        right: 2%;
+    }
+
+    .cus_wrap .ministry-Environ-img {
+        top: 30%;
+        width: 25%;
+        right: 2%;
+    }
+
+    .cus_wrap .ecoce-img-wrap {
+        top: 20%;
+        width: 69%;
+        left: 2%;
+    }
+
+    .cus_wrap .eco-clean-earth {
+        top: 90%;
+        right: 2%;
+    }
+}
+
+@media screen and (max-width: 1217px) {
+    .cus_wrap .eco-clean-earth p:first-child {
+        font-size: 30px;
+    }
+
+    .cus_wrap .eco-clean-earth p:last-child {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .cus_wrap {
+        height: auto;
+        margin: 60px 2%;
+    }
+
+    .cus_wrap .ecoce-bot {
+        width: 75%;
+        position: unset;
+    }
+
+    .cus_wrap .ministry-Environ-img {
+        display: none;
+    }
+
+    .cus_wrap .ecoce-img-wrap {
+        width: 85%;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 65px;
+        margin-bottom: 30px;
+    }
+
+    .cus_wrap .ecoce-img-wrap .ecoce-img {
+        position: unset;
+    }
+
+    .cus_wrap .eco-clean-earth {
+        margin: 0;
+        position: unset;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .cus_wrap .eco-clean-earth {
+        line-height: 35px;
+    }
+
+    .cus_wrap .eco-clean-earth p:first-child {
+        font-size: 28px;
+    }
+
+    .cus_wrap .eco-clean-earth p:last-child {
+        font-size: 22px;
+    }
+
+    .cus_wrap .ecoce-bot {
+        width: 95%;
+    }
+
+    .cus_wrap .ecoce-img-wrap {
+        margin-top: 40px;
+    }
+}
+
+
+
+
+/************************************ 아이콘 *********************************/
+
+section div.back-5{
+    background-color: #04088a;
+    width: 100%;
+    height: 300px;
+}
+section div.back-5d{
+    position: relative;
+    height: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+section div img.sec5-image{
+    position: absolute;
+    bottom: 0;
+}
+
+/* sec-5 Icon */
+section div.wraper{
+    max-width: 1400px;
+    margin: 150px auto;
+    text-align: center;
+}
+section div ul.wraper-ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section div ul li.cu-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 9);
+    margin-bottom: 50px;
+}
+
+/*************************** sec-5 Icon Image ******************************/
+section div ul li div.icon-image{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border: 3px solid rgb(224, 221, 221);
+    border-radius: 50%;
+}
+
+section div ul li div img.icon{
+    position: absolute;
+    max-width: 100%;
+    margin-bottom: 5px;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+section div ul li p{
+    font-size: 16px;
+    color: #A3A3A3;
+    padding-top: 15px;
+    word-break: break-all;
+}
+
+/****************** icon-button *********************/
+section button.h-btn{
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    display: none;
+}
+section button i{
+    font-size: 70px;
+    color: #04088a;
+}
+
+/*********************** icon-media Query **********************/
+@media screen and (max-width: 1217px){
+    section div.back-5{
+        height: 250px;
+    }
+    section div img.sec5-image{
+        width: 50%;
+        margin-left: 20px;
+    }
+    section div ul.wraper-ul{
+        margin: 0 5%;
+    }
+    section div ul li.cu-list{
+        width: calc(100% / 8);
+        padding-left: 15px;
+    }
+    section div ul li div.icon-image{
+        width: 10vw;
+        height: 10vw;
+    }
+    section button.h-btn{
+        display: initial;
+    } 
+}
+
+@media screen and (max-width: 940px){
+    section div .back-5{
+        height: 300px;
+    }
+    section div img.sec5-image{
+        width: 60%;
+        margin: 80px 185px;
+    }
+    section div ul.wraper-ul{
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    section div ul li.cu-list{
+        width: calc(100% / 4);
+    }
+    section div ul li div.icon-image{
+        width: 110px;
+        height: 110px;
+    }
+    section button.h-btn{
+        display: initial;
+    }
+}
+
+
+
+
+
+
+/* 맵 */
+.map-wrap {
+    margin: 200px 200px;
+    margin-left: 200px;
+    display: flex;
+    gap: 90px;
+}
+
+.kakaomap {
+    width: 65%;
+    height: 45vw;
+    animation: aniLeft 3s;
+}
+
+.map-info-wrap {
+    display: flex;
+    gap: 35px;
+    flex-direction: column;
+    font-size: 18px;
+    margin-top: 75px;
+    animation: aniRight 3s;
+    animation-delay: 0.5s;
+}
+
+.map-info>p:first-child {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.map-info p:last-child {
+    line-height: 25px;
+}
+
+.map-info p:last-child {
+    color: #7b7b7b;
+}
+
+@media screen and (max-width: 1300px) {
+    .map-wrap {
+        gap: 50px;
+        margin: 200px 50px;
+    }
+
+    .kakaomap {
+        height: 585px;
+    }
+
+    .map-info-wrap {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1217px) {
+    .kakaomap {
+        height: 650px;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .map-wrap {
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .map-wrap {
+        flex-direction: column-reverse;
+        margin: 0;
+        margin-bottom: 300px;
+        align-items: center;
+    }
+
+    .kakaomap {
+        width: 90%;
+        height: 600px;
+    }
+
+    .map-info-wrap {
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: 0;
+        gap: 0;
+        width: 90%;
+    }
+
+    .map-info {
+        width: calc(100% / 2);
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .map-info-wrap {
+        flex-direction: column;
+    }
+
+    .map-info {
+        width: 100%;
+        margin-bottom: 23px;
+    }
+}
+
+
+
+
+
+
+/********************************* 푸터 **************************************/
+footer {
+    position: relative;
+    width: 100%;
+    clear: both;
+}
+
+.footer_wrapper{
+    display: flex;
+    padding: 80px 50px;
+    background-image: url(./img/footer_back.png);
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.footer_content {
+    margin-left: 5%;
+    width: 85%;
+    display: inline-block;
+}
+
+.ex {
+    font-size: large;
+    color: white;
+}
+
+.elements_wrap{
+    color: #b9b9b9;
+    line-height: 25px;
+}
+
+.elements {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.elements p {
+    margin: 0;
+    width: calc(100% /2);
+}
+
+.elements .copyright{
+    color: #A3A3A3;
+}
+
+
+@media screen and (max-width: 1500px) {
+    .footer_wrapper{
+       word-break: break-all;
+    }
+}
+
+@media screen and (max-width: 1217px) {
+    .footer_wrapper{
+        word-break: break-all;
+     }
+}
+
+@media screen and (max-width: 940px) {
+    .footer_wrapper{
+        word-break: break-all;
+     }
+}
+
+@media screen and (max-width: 640px) {
+    .footer_wrapper{
+        word-break: break-all;
+        display: block;
+        padding-top: 30px;
+        padding-bottom: 30px;
+     }
+     .footer-logo{
+        text-align: center;
+        height: 65px;
+        margin-bottom: 20px;
+     }
+     .footer-logo img{
+        height: 100%;
+     }
+     .footer_content{
+        width: 83%;
+     }
+     .ex{
+        width: 81%;
+        font-size: 14px;
+        line-height: 100%;
+        margin-bottom: 10px;
+     }
+     .elements{
+        display: block;
+     }
+     .elements p {
+        width: 100%;
+        font-size:small;
+        line-height: 130%;
+    }
+}

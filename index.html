@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/01f338039f.js" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- codrops slider -->
+	<script src="js/modernizr.custom.js"></script>
+    <!-- project, service -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+
+<body>
+    <!------------------------- Hamberger Navbar --------------------------->
+    <div id="myNav" class="overlay">
+        <div class="overlay-content">
+            <a class="mobile" href="company.html">회사소개</a>
+            <a class="m-line"href=""></a>
+            <a href="company.html#introduce-resoft">REsoft소개</a>
+            <a href="company.html#history">연혁</a>
+            <a href="company.html#Organization-chart">조직도</a>
+            <a href="company.html#certification">특허&인증</a>
+            <a href="company.html#directions">오시는 길</a>
+        </div>
+        <div class="overlay-content">
+            <a class="mobile" href="business.html">사업현황</a>
+            <a href="business.html#ecoce">ECOCE</a>
+            <a href="business.html#moado">moaDo</a>
+            <a href="business.html#remainder">Etc</a>
+          </div>
+          <div class="overlay-content">
+            <a class="mobile" href="information.html">정보마당</a>
+            <a href="information.html#information">REsoft소식</a>
+          </div>
+    </div>
+<!--------------------------- Hamberger Script ----------------------------->
+    <script>
+        function btn_toggle(){
+            $("#myNav").fadeToggle("slow");
+        }
+    </script>
+    
+<!-------------------------------------------------------------- top button ----------------------------------------------------------------->
+    <div class="topBtn">
+        <a href="#" class="topBtn-a"><i class="fa-solid fa-circle-chevron-up"></i></a>
+    </div>
+    <script src="./js/topBtn.js"></script>
+
+    <header>
+        <div class="container">
+            <h1>
+<!--------------------- Resoft Logo ----------------------->
+                <a href="index.html"><img src="./img/resoft logo.png"></a>
+            </h1>
+<!----------------------- Nav Bar ------------------------->
+            <nav class="nav">
+                <ul id="nav-bar">
+                    <li>
+                        <a href="company.html">회사소개</a>
+                    </li>
+                    <li>
+                        <a href="business.html">사업현황</a>
+                    </li>
+                    <li>
+                        <a href="information.html">정보마당</a>
+                    </li>
+<!--------------------- Hamberger Button ---------------------->
+                    <li class="btn"> 
+                        <button type="button" onclick="btn_toggle()"><i class="fa-solid fa-bars" style="color:white"></i></button>
+                    </li>
+                </ul>
+            </nav>    
+        </div>
+
+<!-------------------------------- Main Text ---------------------------------->
+        <div class="text-box">
+            <div class="hd-1">
+                <p class="main-text">Evolution<br />With New Software</p>
+                <p class="sub-text">
+                    <span>Mobile APP(Android/iOS) Development, </span>
+                    <span>AI Bigdata Analysis, MetaVerse, </span>
+                    <span>Responsive WEBsite, Brand Design Launch, </span>
+                    <span>ICT Consulting</span>
+                </p>
+            </div>
+        </div>
+<!---------------------------- codrops Slide Control ------------------------------>
+        <div class="main">
+            <ul id="cbp-bislideshow" class="cbp-bislideshow">
+                <li><img src="./img/Head-back-img.png" alt="image01"/></li>
+                <li><img src="./img/back-slide-2.png" alt="image02"/></li>
+                <li><img src="./img/back-slide-3.png" alt="image03"/></li>
+            </ul>
+            <div id="cbp-bicontrols" class="cbp-bicontrols">
+                <span class="cbp-biprev"></span>
+                <span class="cbp-bipause"></span>
+                <span class="cbp-binext"></span>
+            </div>                    
+        </div>
+<!-------------------------------- codrops slider  -------------------------------->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/jquery.imagesloaded.min.js"></script>
+		<script src="js/cbpBGSlideshow.min.js"></script>
+		<script>
+			$(function() {
+				cbpBGSlideshow.init();
+			});
+		</script>
+<!-------------------------------- header scroll -------------------------------->
+        <script>
+            $(document).ready(function(){       
+                var scroll_pos = 0;
+                $(document).scroll(function() { 
+                    scroll_pos = $(this).scrollTop();
+                    if(scroll_pos > 830) {
+                        $(".container").css('background-color', 'rgba(47, 88, 163, 0.9)');
+                    } else {
+                        $(".container").css('background-color', 'transparent');
+                    }
+                });
+            });
+        </script>
+    </header>
+<!------------------------------------- Header End --------------------------------------->
+
+<!------------------------------------ Resoft-News ---------------------------------------->
+    <div id="News">
+        <div class="news">
+            <div class="title">
+                <p>리소프트의 새로운 소식</p>
+                <p>RESOFT NEWS</p>
+            </div>
+            <div class="cont">
+                <div class="link">
+                    <a href="">
+                        <div class="img-wrap"><img src="./img/news_mi.png"></div>
+                        <p>Lorem ipsum dolor sit amet, consetetur sdipscing elit...</p>
+                        <p>2022.01.01</p>
+                    </a>
+                </div>
+                <div class="line1"></div>
+                <div class="link">
+                    <a href="">
+                        <div class="img-wrap"><img src="./img/news_mi.png"></div>
+                        <p>Lorem ipsum dolor sit amet, consetetur sdipscing elit...</p>
+                        <p>2022.01.01</p>
+                    </a>
+                </div>
+                <div class="line2"></div>
+                <div class="link">
+                    <a href="">
+                        <div class="img-wrap"><img src="./img/news_mi.png"></div>
+                        <p>Lorem ipsum dolor sit amet, consetetur sdipscing elit...</p>
+                        <p>2022.01.01</p>
+                    </a>
+                </div>
+                <div class="line3"></div>
+                <div class="link">
+                    <a href="">
+                        <div class="img-wrap"><img src="./img/news_mi.png"></div>
+                        <p>Lorem ipsum dolor sit amet, consetetur sdipscing elit...</p>
+                        <p>2022.01.01</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!------------------------------------ project ----------------------------------------->
+    <div id="project">
+        <div class="pject-wrap">
+           <div class="pject-con-wrap">
+                <div class="pject-con-right">
+                    <div class="pject-ecoce">
+                        <figure class="pject-ecoce-wrap">
+                            <div class="ecoce-back-img imghover">
+                                <img src="./img/home-ecoce.png" alt="에코스3D사진">
+                            </div>
+                            <figcaption>
+                                <h4>에코스 ECOCE (ECO-Clean Earth)</h4>
+                                <p>국내 최초<br />
+                                    탄소중립 실천인증 플랫폼</p>
+                                <a href="#"></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="pject-moado">
+                        <figure class="pject-moado-wrap">
+                            <div class="moado-back-img imghover">
+                                <img src="./img/main-visual.png" alt="모아두사진">
+                            </div>
+                            <figcaption>
+                                <h4>모아두 (moaDo)</h4>
+                                <p>내 손안의 모바일 회원수첩</p>
+                                <a href="#"></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="pject">
+                    <div class="pject-text">
+                        <h2>프로젝트</h2>
+                        <p class="pject-eng">RESOFT PROJECT</p>
+                        <p class="pject-con">첨단 기술 서비스 제공을 위해 사용자 입장에서<br />
+                        생각하고 항상 새로운 도전을 시도합니다.</p>
+                    </div>
+                    <div class="motion-pic-1">
+                        <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_3rqwsqnj.json" background="transparent"
+                        speed="1" style="width: 680px; height: 680px;" loop autoplay></lottie-player>
+                    </div>
+                    <div class="motion-pic-2">
+                        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_thslrhnu.json" background="transparent"
+                        speed="1" style="width: 680px; height: 591px;" loop autoplay></lottie-player>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!------------------------------------------- service ----------------------------------------->
+    <div class="service">
+        <div class="left">
+            <div class="title">
+                <p>서비스</p>
+                <p>SERVICE</p>
+                <p>다양한 기술플랫폼을 제공하여 기능성을 열어주고 의미있는 성공으로 인도하는 서비스를 제공합니다.</p>
+            </div>
+            <div class="aniimg">
+                <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_munz8tnq.json" background="transparent" speed="1" style="width: 680px; height: 680px;" loop autoplay></lottie-player>
+            </div>
+            <div class="aniimg_small">
+                <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_c9fk7tli.json" background="transparent" speed="1" style="width: 534px; height: 534px;" loop autoplay></lottie-player>
+            </div>
+        </div>
+        <div class="right">
+            <div class="app card">
+                <span class="front">
+                    <p>앱(APP) 개발</p>
+                    <p>ANDROID / IOS</p>
+                </span>
+                <span class="back">
+                    <p>Android 앱 개발</p>
+                    <p>iOS 앱 개발</p>
+                    <p>플랫폼 기획 및 설계</p>
+                </span> 
+            </div>
+            <div class="web card">
+                <span class="front wow fadeIn"data-wow-delay="0.3s">
+                    <p>웹(WEB) 구축</p>
+                    <p>RESPNSIVE WEB</p>
+                </span>
+                <span class="back">
+                    <p>반응형 홈페이지 구축</p>
+                    <p>데이터베이스 구축</p>
+                    <p>빅데이터 구축</p>
+                </span>
+            </div>
+            <div class="ai card">
+                <span class="front">
+                    <p>AI 기반 기술개발</p>
+                    <p>AI BIGDATA</p>
+                </span>
+                <span class="back">
+                    <p>AI 대화형 챗봇</p>
+                    <p>자동 객체인식 검출기</p>
+                    <p>딥러닝 학습 모델</p>
+                </span>
+            </div>
+            <div class="xr card">
+                <span class="front">
+                    <p>XR 콘텐츠 구현</p>
+                    <p>METAVERSE</p>
+                </span>
+                <span class="back">
+                    <p>실감형 플랫폼 구축</p>
+                    <p>가상현실 콘텐츠 제작</p>
+                    <p>게임콘텐츠 제작</p>
+                </span>
+            </div>
+        </div>
+    </div>
+<!--------------------------------------- REFERENCE ------------------------------------------->
+    <section id="Reference">
+        <div class="refer_web" style="position:relative;">
+            <div class="refer_header">
+                <p style="color:#1E1E1E; font-size:40px; font-weight: bold; ">레퍼런스</p>
+                <p style="color:#C8C8C8; font-size:18px; height:26px;">REFERENCE</p>
+            </div>
+            <!-- 박스위 선 -->
+            <div class="refer_hadeline" style=" margin-top:58px;  border-top: #1E1E1E 2px solid;">
+            <!-- 박스  -->
+                <ul class="refer-ul">
+                
+                    <li class="Reference_iconbox">
+                        <div  class="icon-image" >
+                            <img  src="./img/Daegu Architecture.png" class="icon" style="width:179px; height:50px;"  >                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/ColorfulDaegu.png" class="icon" style="width:120px; height:63.15px;" >                
+                        </div>
+                    </li>
+        
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/maeil.png" class="icon" style="width:176.58px; height: 34.4px;">                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/kyeongbukuni.png" class="icon" style="width: 160px; height: 41.89px;">                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/MBC.png" class="icon" style="width: 162px; height: 29px;" >                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/Daeguphysical.png" class="icon" style="width: 172px; height: 35px;" >                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/DCU.png" class="icon" style="width: 176.93px; height: 25.07px;" >                
+                        </div>
+                    </li>
+                    
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/Songpa.png" class="icon" style="width: 172.39px; height: 57.03px;" >                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/PeoplePower.png" class="icon" style="width: 160px; height: 37.66px;">                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/LionsClub.png" class="icon" style="width: 160px; height: 42.63px;" >                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/korea electricity.png" class="icon" style="width: 184px; height: 20px;" >                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/happy.png" class="icon"  style="width: 113px; height: 72px;">                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/KoreaSeaUni.png" class="icon" style="width: 177.93px; height: 38.21px;" >                
+                        </div>
+                    </li>
+                    
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/Daegusanggong.png" class="icon" style="width: 172px; height: 39px;">                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/CAK.png" class="icon" style="width: 176.58px; height: 55.96px;" >                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/JCI.png" class="icon" style="width: 135.3px; height: 65.73px;">                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/University3.png" class="icon" style="width: 174.54px; height: 28.96px;">                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/University4.png" class="icon" style="width: 186px; height: 28.6px;">                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/DaeguHighSchool.png" class="icon" style="width: 169px; height: 42px;">                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/DGICT.png" class="icon" style="width: 171px; height: 31px;">                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/Korea cooking.png" class="icon" style="width: 188px; height: 43px;">                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/Kibwa.png" class="icon" style="width: 120px; height: 55px;">                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/JUNGSo.png" class="icon" style="width: 191.28px; height: 32.5px;">                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/DaeguCredit.png" class="icon" style="width: 185px; height: 47px;">                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/Dalseo.png" class="icon" style="width: 177.45px; height: 30.5px;" >                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/DIP.png" class="icon" style="width: 192px; height: 27px;">                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/Rotary.png" class="icon" style="width: 159px; height: 59px;" >                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/Suseong.png" class="icon" style="width: 143.71px; height: 52.72px;">                
+                        </div>
+                    </li>
+        
+                    <li class="Reference_iconbox">
+                        <div class="icon-image">
+                            <img src="./img/TBN.png" class="icon" style="width: 170.04px; height: 38.11px;">                
+                        </div>
+                    </li>
+                    <li class="Reference_iconbox"  style="border: 1px solid white">
+                        <div class="icon-image" >
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section> 
+<!------------------------------------- footer ------------------------------------------------->
+    <footer id="footer">
+        <div class="footer-wrap">
+            <div class="footer-logo">
+                <img src="./img/resoft.png" alt="">
+            </div>
+
+            <div class="address">
+                <p class="footer-add">© RESOFT CO.LTD. All Rights Reserved.</p>  
+                <p class="footer-inform">
+                    <span>상호 : (주)리소프트</span>
+                    <br>
+                    <span>사업자등록번호 : 722-81-02219</span>
+                    <br>
+                    <span>주소 : (41260) 대구광역시 동구 동대구로 465, 대구스케일업허브(DASH) 713호 (신천동 106)</span>
+                </p>
+                <p class="footer-inform-add">
+                    <span>대표이사 : 오유나</span>&nbsp;&nbsp;
+                    <span>개인정보책임자 : 이현지</span>
+                    <br/>
+                    <span>전화 : (053) 475-2110</span>&nbsp;&nbsp;&nbsp; 
+                    <span>팩스 : (0504) 257-5966</span>&nbsp;&nbsp;&nbsp;
+                    <span>이메일 : call@resoft.kr</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

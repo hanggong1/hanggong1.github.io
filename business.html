@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/business.css">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/01f338039f.js" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Aos animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    <script>
+        window.onload = function(){
+            setDraggable(false)
+            setZoomable(false)
+        }
+    </script>
+
+</head>
+
+<body>
+    <!------------------------- Hamberger Navbar --------------------------->
+    <div id="myNav" class="overlay">
+        <div class="overlay-content">
+            <a class="mobile" href="company.html">회사소개</a>
+            <a class="m-line"href=""></a>
+            <a href="company.html#introduce-resoft">REsoft소개</a>
+            <a href="company.html#history">연혁</a>
+            <a href="company.html#Organization-chart">조직도</a>
+            <a href="company.html#certification">특허&인증</a>
+            <a href="company.html#directions">오시는 길</a>
+        </div>
+        <div class="overlay-content">
+            <a class="mobile" href="business.html">사업현황</a>
+            <a href="business.html#ecoce">ECOCE</a>
+            <a href="business.html#moado">moaDo</a>
+            <a href="business.html#remainder">Etc</a>
+        </div>
+        <div class="overlay-content">
+            <a class="mobile" href="information.html">정보마당</a>
+            <a href="information.html#information">REsoft소식</a>
+        </div>
+    </div>
+<!--------------------------- Hamberger Script ----------------------------->
+    <script>
+        function btn_toggle(){
+            $("#myNav").fadeToggle("slow");
+        }
+    </script>
+
+<!-------------------------------------------------------------- top button ----------------------------------------------------------------->
+    <div class="topBtn">
+        <a href="#" class="topBtn-a"><i class="fa-solid fa-circle-chevron-up"></i></a>
+    </div>
+    <script src="./js/topBtn.js"></script>
+
+    <header>
+        <div class="container" id="business">
+            <h1>
+<!--------------------- Resoft Logo ----------------------->
+                <a href="index.html"><img src="./img/Header-Logo.svg"></a>
+            </h1>
+<!----------------------- Nav Bar ------------------------->
+            <ul>
+                <li class="nav">
+                    <a href="company.html" class="nav-item" active-color="#78EAFF">회사소개</a>
+                    <a href="business.html" class="nav-item is-active" active-color="#78EAFF">사업현황</a>
+                    <a href="information.html" class="nav-item" active-color="#78EAFF">정보마당</a>
+                    <span class="nav-indicator"></span>
+                </li>
+                <script src="./js/header5.js"></script>
+
+<!--------------------- Hamberger Button ---------------------->
+                <li class="btn">
+                    <button type="button" onclick="btn_toggle()"><i class="fa-solid fa-bars" style="color:black"></i></button>
+                </li>
+            </ul>
+        </div>
+<!------------------------- business header ------------------------->
+        <div id="business-header">
+            <h1>사업현황</h1>
+        </div>
+<!-------------------------------- header scroll -------------------------------->
+        <script>
+            $(document).ready(function(){       
+                var scroll_pos = 0;
+                $(document).scroll(function() { 
+                    scroll_pos = $(this).scrollTop();
+                    if(scroll_pos > 80) {
+                        $(".container").css('background-color', 'rgba(47, 88, 163, 0.9)');
+                    } else {
+                        $(".container").css('background-color', 'transparent');
+                    }
+                });
+            });
+        </script>
+    </header>
+<!------------------------------- ecoce ----------------------------------->
+    <section id="ecoce">
+        <div class="ecose_7">
+            <h2 class="title_1">에코스</h2>
+            <p class="title_2">ECO-Clean Earth</p>
+            <div class="ecoce-imga">
+                <img src="./img/ecosfront.png" alt="">
+            </div>
+            <div class="ecoce-right">
+                <p class="ex_text">국내 최초<br>탄소중립 실천인증 플랫폼</p>
+                <img src="./img/ecos.png" alt="">
+                <p class="logo_2">ECO-Clean Earth</p>
+                <ul class="ecoce-app">
+                    <li>
+                        <a href="">
+                            <img src="./img/playstore.png" alt="">
+                            <p>Play Store에서 다운로드</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/apple.png" alt="">
+                            <p>App Store에서 다운로드</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </section>
+<!----------------------------------- moado ------------------------------------>        
+    <section id = "moado">
+        <div class="bkg-left">
+            <div class="bkg-right">
+                <div class="moado_title">
+                    <h1>모아두</h1>
+                    <p>moado</p>
+                </div>
+                <div class = "wrapper">
+                    <div class = "moado_left">
+                        <img src="./img/moado2.png">
+                    </div>
+                    <div class = "moado_right">
+                        <p>내 손안의 모바일 회원수첩</p>
+                        <img src="./img/pass649.png">
+                        <button type="button"  style="cursor:pointer;">사이트 바로가기</button>
+                    </div>
+                    <div class = "moado_middle">
+                        <img src="./img/mainmoado.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-------------------------------- remainder ------------------------------------>
+    <div id="remainder">
+        <div class="remainder-text">
+            <p>Etc</p>
+            <span>PROJECTS</span>
+        </div>
+        
+        <div class="remainder-container">
+            <ul class="remainder-ul">
+                <li class="remainder-li" 
+                data-aos="zoom-out-down" 
+                data-aos-offset="500" 
+                data-aos-easing="ease-out-sine"
+                data-aos-duration="1000">
+                    <div class="remainder-image-box">
+                        <img src="./img/mask-go.png" class="remainder-img">                
+                    </div>
+                </li>
+                <li class="remainder-li"
+                data-aos="zoom-out-down" 
+                data-aos-offset="500"
+                data-aos-delay="100" 
+                data-aos-easing="ease-out-sine"
+                data-aos-duration="1000">
+                    <div class="remainder-image-box">
+                        <img src="./img/urology.png" class="remainder-img">                
+                    </div>
+                </li>
+                <li class="remainder-li"
+                data-aos="zoom-out-down" 
+                data-aos-offset="500"
+                data-aos-delay="300" 
+                data-aos-easing="ease-out-sine"
+                data-aos-duration="1000">
+                    <div class="remainder-image-box">
+                        <img src="./img/maroton-mobile.png" class="remainder-img">                
+                    </div>
+                </li>
+                <li class="remainder-li"
+                data-aos="zoom-out-down" 
+                data-aos-offset="500"
+                data-aos-delay="500" 
+                data-aos-easing="ease-out-sine"
+                data-aos-duration="1000">
+                    <div class="remainder-image-box">
+                        <img src="./img/solab.png" class="remainder-img">                
+                    </div>
+                </li>
+                <li class="remainder-li"
+                data-aos="zoom-out-down" 
+                data-aos-offset="500"
+                data-aos-delay="700" 
+                data-aos-easing="ease-out-sine"
+                data-aos-duration="1000">
+                    <div class="remainder-image-box">
+                        <img src="./img/kibwa-mobile.png" class="remainder-img">                
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script> 
+            AOS.init(); // 자바스크립트로 init()을 해야 동작한다.
+    </script>
+<!------------------------- footer ------------------------------->
+    <footer id="footer">
+        <div class="footer-wrap">
+            <div class="footer-logo">
+                <img src="./img/resoft.png" alt="">
+            </div>
+
+            <div class="address">
+                <p class="footer-add">© RESOFT CO.LTD. All Rights Reserved.</p>  
+                <p class="footer-inform">
+                    <span>상호 : (주)리소프트</span>
+                    <br>
+                    <span>사업자등록번호 : 722-81-02219</span>
+                    <br>
+                    <span>주소 : (41260) 대구광역시 동구 동대구로 465, 대구스케일업허브(DASH) 713호 (신천동 106)</span>
+                </p>
+                <p class="footer-inform-add">
+                    <span>대표이사 : 오유나</span>&nbsp;&nbsp;
+                    <span>개인정보책임자 : 이현지</span>
+                    <br/>
+                    <span>전화 : (053) 475-2110</span>&nbsp;&nbsp;&nbsp; 
+                    <span>팩스 : (0504) 257-5966</span>&nbsp;&nbsp;&nbsp;
+                    <span>이메일 : call@resoft.kr</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

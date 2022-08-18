@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/information.css">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/01f338039f.js" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- underline-animation-->
+    <script src="./js/underline-animation3.js"></script>
+    <!-- information button -->
+    <script src="./js/load.js"></script>
+    
+</head>
+
+<body>
+    <!------------------------- Hamberger Navbar --------------------------->
+    <div id="myNav" class="overlay">
+        <div class="overlay-content">
+            <a class="mobile" href="company.html">회사소개</a>
+            <a class="m-line"href=""></a>
+            <a href="company.html#introduce-resoft">REsoft소개</a>
+            <a href="company.html#history">연혁</a>
+            <a href="company.html#Organization-chart">조직도</a>
+            <a href="company.html#certification">특허&인증</a>
+            <a href="company.html#directions">오시는 길</a>
+        </div>
+        <div class="overlay-content">
+            <a class="mobile" href="business.html">사업현황</a>
+            <a href="business.html#ecoce">ECOCE</a>
+            <a href="business.html#moado">moaDo</a>
+            <a href="business.html#remainder">Etc</a>
+        </div>
+        <div class="overlay-content">
+            <a class="mobile" href="information.html">정보마당</a>
+            <a href="information.html#information">REsoft소식</a>
+        </div>
+    </div>
+<!--------------------------- Hamberger Script ----------------------------->
+    <script>
+        function btn_toggle(){
+            $("#myNav").fadeToggle("slow");
+        }
+    </script>
+
+<!-------------------------------------------------------------- top button ----------------------------------------------------------------->
+    <div class="topBtn">
+        <a href="#" class="topBtn-a"><i class="fa-solid fa-circle-chevron-up"></i></a>
+    </div>
+    <script src="./js/topBtn.js"></script>
+    
+    <header>
+        <div class="container" id="information">
+            <h1>
+<!--------------------- Resoft Logo ----------------------->
+                <a href="index.html"><img src="./img/Header-Logo.svg"></a>
+            </h1>
+<!----------------------- Nav Bar ------------------------->
+            <ul>
+                <li class="nav">
+                    <a href="company.html" class="nav-item" active-color="#78EAFF">회사소개</a>
+                    <a href="business.html" class="nav-item" active-color="#78EAFF">사업현황</a>
+                    <a href="information.html" class="nav-item is-active" active-color="#78EAFF">정보마당</a>
+                    <span class="nav-indicator"></span>
+                </li>
+                <script src="./js/header5.js"></script>
+
+<!--------------------- Hamberger Button ---------------------->
+                <li class="btn">
+                    <button type="button" onclick="btn_toggle()"><i class="fa-solid fa-bars" style="color:black"></i></button>
+                </li>
+            </ul>
+        </div>
+
+<!------------------------- information header ------------------------->
+        <div id="information-header">
+            <h1>정보마당</h1>
+        </div>
+<!-------------------------------- header scroll -------------------------------->
+        <script>
+            $(document).ready(function(){       
+                var scroll_pos = 0;
+                $(document).scroll(function() { 
+                    scroll_pos = $(this).scrollTop();
+                    if(scroll_pos > 80) {
+                        $(".container").css('background-color', 'rgba(47, 88, 163, 0.9)');
+                    } else {
+                        $(".container").css('background-color', 'transparent');
+                    }
+                });
+            });
+        </script>
+    </header>
+
+<!------------------------ information ----------------------------->
+    <div id="infomation">
+        <div class="title">
+            <p>REsoft 소식</p>
+            <p class="title-sub">NEWS</p>
+        </div>
+        <div class="cont">
+            <div class="card">
+                <a href="information-article1.html">
+                    <div class="img-box"><img src="./img/1.webp" alt=""></div>
+                    <div class="text-box">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing ...</p>
+                        <p>2022.01.01</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="information-article2.html">
+                    <div class="img-box"><img src="./img/2.webp" alt=""></div>
+                    <div class="text-box">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing ...</p>
+                        <p>2022.01.01</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="information-article3.html">
+                    <div class="img-box"><img src="./img/3.webp" alt=""></div>
+                    <div class="text-box">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing ...</p>
+                        <p>2022.01.01</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="information-article4.html">
+                    <div class="img-box"><img src="./img/4.webp" alt=""></div>
+                    <div class="text-box">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing ...</p>
+                        <p>2022.01.01</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="information-article5.html">
+                    <div class="img-box"><img src="./img/5.webp" alt=""></div>
+                    <div class="text-box">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing ...</p>
+                        <p>2022.01.01</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="information-article6.html">
+                    <div class="img-box"><img src="./img/6.webp" alt=""></div>
+                    <div class="text-box">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing ...</p>
+                        <p>2022.01.01</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="">
+                    <div class="img-box"><img src="./img/7.webp" alt=""></div>
+                    <div class="text-box">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing ...</p>
+                        <p>2022.01.01</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="">
+                    <div class="img-box"><img src="./img/8.webp" alt=""></div>
+                    <div class="text-box">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing ...</p>
+                        <p>2022.01.01</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="">
+                    <div class="img-box"><img src="./img/9.webp" alt=""></div>
+                    <div class="text-box">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing ...</p>
+                        <p>2022.01.01</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="">
+                    <div class="img-box"><img src="./img/10.webp" alt=""></div>
+                    <div class="text-box">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing ...</p>
+                        <p>2022.01.01</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="add">
+            <div class="button"><button class="info-btn">더보기</button></div>
+        </div>
+    </div>
+<!------------------------- footer ------------------------------->
+    <footer id="footer">
+        <div class="footer-wrap">
+            <div class="footer-logo">
+                <img src="./img/resoft.png" alt="">
+            </div>
+
+            <div class="address">
+                <p class="footer-add">© RESOFT CO.LTD. All Rights Reserved.</p>  
+                <p class="footer-inform">
+                    <span>상호 : (주)리소프트</span>
+                    <br>
+                    <span>사업자등록번호 : 722-81-02219</span>
+                    <br>
+                    <span>주소 : (41260) 대구광역시 동구 동대구로 465, 대구스케일업허브(DASH) 713호 (신천동 106)</span>
+                </p>
+                <p class="footer-inform-add">
+                    <span>대표이사 : 오유나</span>&nbsp;&nbsp;
+                    <span>개인정보책임자 : 이현지</span>
+                    <br/>
+                    <span>전화 : (053) 475-2110</span>&nbsp;&nbsp;&nbsp; 
+                    <span>팩스 : (0504) 257-5966</span>&nbsp;&nbsp;&nbsp;
+                    <span>이메일 : call@resoft.kr</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

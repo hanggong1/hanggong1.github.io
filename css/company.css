@@ -1,0 +1,1153 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+li {
+    list-style: none;
+}
+
+/****************************** TOP button ********************************/
+.topBtn{
+    position: fixed;
+    z-index: 999;
+    bottom: 7%;
+    right: 3%;
+    align-items: center;
+    display: none;
+}
+.topBtn .topBtn-a{
+    cursor: pointer;
+}
+.topBtn i{
+    font-size: 50px;
+    color: #184B9F;
+}
+
+/********************************* 헤더부분 *************************************/
+header {
+    width: 1920px;
+    z-index: 1000;
+    top:0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between; /* 양 끝으로 배치 */
+    align-items: center;
+    width: 100%;
+    border: 1px solid #DBDBDB;
+    height: 80px;
+    position: fixed;
+    top:0;
+    z-index: 1000;
+}
+
+header ul {
+    width: 648px;
+    position: relative;
+    margin-right: 126px;
+    height: 80px;
+}
+
+header ul li {
+    display: inline-block;
+}
+
+.nav {
+    display: inline-flex;
+    position: relative;
+    max-width: 100%;
+    padding: 0 20px;
+    top: -5px;
+}
+.nav-item {
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+    z-index: 1;
+    font-size: 20px;
+    font-weight: bolder;
+    position: relative;
+    margin-right: 68px;
+    margin-bottom: 10px;
+}
+
+.nav-item:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: -10%;
+    width: 100%;
+    height: 5px;
+    background-color: blue;
+    border-radius: 5px 5px 5px 5px;
+    opacity: 0;
+    transition: 0.5s;
+    margin-bottom: -10px;
+}
+
+.nav-item:not(.is-active):hover:before {
+    opacity: 1;
+    bottom: 0;
+    left: 1%;
+}
+
+.nav-item:not(.is-active):hover {
+    color: blue;
+}
+
+.nav-indicator {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    transition: 0.4s;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+header button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 32px;
+    margin-top: 17px;
+}
+
+/************************************* 로고 ****************************************/
+header h1 a { 
+    margin-left: 360px;
+}
+header h1 a img {
+    width: 133px;
+    height: 30px;
+}
+
+/********************* company-header ***********************/
+#company-header {
+    background: url(../img/company-main.png) no-repeat center;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+#company-header h1 {
+    color: white;
+}
+
+/************************** Hidden **************************/
+.overlay {
+    height: 210px;
+    width: 100%;
+    z-index: 1000;
+    top: 80px;
+    left: 0;
+    background-color: rgba(47, 88, 163, 0.7);
+    position: fixed;
+    display: none;
+}
+
+.overlay-content {
+    float: left;
+    top: 10%;
+    text-align: left;
+    margin-right: 50px;
+    margin-top: 15px;
+    line-height: 0.7;
+}
+.overlay-content:first-child {
+    margin-left: 1139px;
+}
+.overlay-content:nth-child(2) {
+    margin-left: -17px;
+}
+.overlay-content:last-child {
+    margin-left: 14px;
+}
+
+.overlay .mobile {
+    display: none;
+}
+.overlay .m-line {
+    display: none;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffff;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: black;
+}
+
+/*************** 회사소개 - REsoft소개 ****************/
+#introduce-resoft {
+    width: 1920px;
+    height: 756px;
+}
+
+.introduce-title {
+    margin-top: 100px;
+    margin-left: 240px;
+}
+.title-m {
+    font: bold 40px/58px Noto Sans KR;
+    color: #1E1E1E;
+}
+
+.title-sub {
+    font: medium 18px/26px Noto Sans KR;
+    color: #C8C8C8;
+}
+
+.info-container {
+    position:relative;
+    border-collapse: collapse;
+    width: 1440px;
+    height: 522px;
+    margin-top: 50px;
+    margin-left: 240px;
+    margin-bottom: 100px;
+}
+
+.info-p {
+    font:  bold 24px/50px Noto Sans KR;
+    letter-spacing: 1.2px;
+    color: #1E1E1E;
+    text-align:center;
+}
+
+.info-p p {
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 12.3px;
+}
+
+.info-p2 {
+    font: normal 20px/30px Noto Sans KR;
+    color: #959595; 
+}
+
+.info-p2 p {
+    margin-left: 280px;
+    margin-top: 22.3px;
+}
+
+/****************** 회사소개 RESOFT소개 밑줄 ****************/
+.info-box{
+    border-bottom: 1px solid #C8C8C8;
+    margin: 0;
+}
+
+/********************* history 연혁 ********************/
+#history {
+    width: 1920px;
+    height: 1314px;
+    background-color: #F9F9F9;
+}
+
+.history-title p {
+    position: relative;
+    font-size: 40px;
+    padding-top: 100px;
+    margin-left: 240px;
+    font-weight: bolder;
+}
+.history-title span {
+    margin-left: 255px;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #959595;
+    text-align: center;
+}
+
+/******************* history-ul *******************/
+.history-ul {
+    position: relative;
+    width: 1140px;
+    height: 980px;
+    margin-left: 540px;
+    margin-top: 78px;
+}
+
+.history-ul h1 {
+    position: absolute;
+    width: 125px;
+    height: 72px;
+    font-size: 50px;
+    line-height: 40px;
+}
+
+.history-ul .ul-line {
+    border-bottom: 1px solid #DBDBDB;
+}
+
+/******** 세로 라인 만들기 *********/
+.history-ul::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #959595;
+    left: 31.5%;
+    margin-left: -2px;
+    padding: 20px 0;
+    width: 6px;
+    height: 88%;
+    margin-top: 30px;
+}
+
+.history-ul li {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.history-ul li h4 {
+    font-size: 32px;
+    color: #184B9F;
+    text-align: right;
+    margin-right: 830px;
+}
+
+/************ 세로라인 동그라미 만들기 ************/
+.history-ul li h4::before {
+    content:""; 
+    position: absolute;
+    left: 30.7%; 
+    transform: translateY(60%);
+    border-radius: 100%;
+    background:#fff; 
+    border: 10px solid #184B9F;
+    box-sizing: border-box;
+}
+
+
+.history-ul li p {
+    padding-left: 35%;
+    line-height: 80px;
+    margin-top: -30px;
+    font-size: 20px;
+}
+
+
+/************** 2021 위치 조정 *************/
+.history-point {
+    margin-top: 50px;
+}
+.mobile-h-p {
+    display: none;
+}
+
+/********************* Organization-chart *******************/
+#Organization-chart {
+    background-color: #FFFFFF;
+    width: 1920px;
+    height: 906px;
+}
+
+.Organization-title p {
+    position: relative;
+    font-size: 40px;
+    padding-top: 140px;
+    font-weight: bolder;
+    margin-left: 240px;
+}
+.Organization-title span {
+    margin-left: 240px;
+    font-size: 18px;
+    color: #959595;
+    font-weight: bolder;
+}
+
+/************************* tree-title & box **********************/
+.Org-tree {
+    width: 1400px;
+    height: 532px;
+    margin-top: 50px;
+    margin-left: 240px;
+}
+
+.Org-tree .CEO {
+    background-color: #184B9F;
+    color: #FFFFFF;
+    width: 200px;
+    height: 80px;
+    padding: 22px 48px;
+    font-size: 26px;
+    border-radius: 20px;
+}
+
+.Org-tree .department1 {
+    width: 200px;
+    height: 80px;
+    padding: 21px 34px;
+    font-size: 26px;
+    border: 1px solid #184B9F;
+    border-radius: 20px;
+}
+
+.Org-tree .department2 {
+    width: 200px;
+    height: 80px;
+    padding: 21px 60px;
+    font-size: 26px;
+    border: 1px solid #184B9F;
+    border-radius: 20px;
+}
+
+.Org-tree .department3 {
+    width: 200px;
+    height: 80px;
+    padding: 21px 47px;
+    font-size: 26px;
+    border: 1px solid #184B9F;
+    border-radius: 20px;
+}
+
+.Org-tree .department4 {
+    width: 200px;
+    height: 80px;
+    padding: 21px 47px;
+    font-size: 26px;
+    border: 1px solid #184B9F;
+    border-radius: 20px;
+}
+
+.Org-tree .department5 {
+    width: 200px;
+    height: 80px;
+    padding: 21px 34px;
+    font-size: 26px;
+    border: 1px solid #184B9F;
+    border-radius: 20px;
+}
+
+/********************* 위치 조절 **********************/
+.level-1,
+.level-2,
+.level-3 {
+    position: relative;
+}
+
+/********************* LEVEL-1 STYLES ************************/
+.level-1 {
+    width: 50%;
+    margin: 0 auto;
+    /* 중앙 정렬 */
+}
+
+/******************* LEVEL-1 중앙 세로선 **************************/
+.level-1::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 140px;
+    background: black;
+}
+
+/***************** LEVEL-2 STYLES *********************/
+.level-2-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* fr = 컨테이너 내의 공간 비율을 분수로 나타내는 단위 */
+    /* 5개의 부서를 가로로 나눠서 배치 */
+}
+
+/*************** LEVEL-2 가로선 & 위치 ***************/
+.level-2-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 70px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: black;
+}
+
+/*************** LEVEL-2 세로선 & 위치 ***************/
+/*.level-2-wrapper::after {
+    display: none;
+    content: "";
+    position: absolute;
+    left: -20px;
+    bottom: -20px;
+    width: calc(100% + 20px);
+    height: 2px;
+    background: black;
+}*/
+
+.level-2-wrapper li {
+    position: relative;
+    margin-top: 140px;
+}
+
+.level-2-wrapper > li::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 70px;
+    background: black;
+}
+
+.level-2 {
+    width: 70%;
+    margin: 0 auto 40px;
+}
+
+/*.level-2::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 0px;
+    background: black;
+}
+
+만약 그 밑에 하위 요소를 배치하기위해 선을 만들어야할 때 사용 
+
+.level-2::after {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-100%, -50%);
+    width: 20px;
+    height: 2px;
+    background: black;
+}*/
+
+/**************** LEVEL-3 STYLES ****************/
+.level-3-desc {
+    margin-left: 40px;
+    font-size: 22px;
+}
+
+/******************************* 특허인증 **********************************/
+#certification {
+    width: 1920px;
+    height: 1454px;
+    background-color: #F9F9F9;
+}
+
+#certification .cert_text .cert_p1 {
+    position: relative;
+    font: normal normal bold 40px/58px Noto Sans KR;
+    padding-top: 100px;
+    margin-left: 240px;
+}
+
+#certification .cert_text span{
+    margin-left: 240px;
+    font: normal normal medium 18px/26px Noto Sans KR;
+    color: #C8C8C8;
+}
+
+/********************** 특허 이미지 박스 ***********************/
+
+.cert_container{
+    width: 990px;
+    height: 1120px;
+    margin-left:630px;
+}
+
+.cert_ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 55px;
+}
+
+.cert_li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 3);
+    margin-bottom: 80px;
+}
+
+/********************** 특허 이미지 **************************/
+.cert_image_box {
+    position: relative;
+    width: 230px;
+    height: 320px;
+    background-color: #FFFFFF;
+    padding: 5px;
+    border-radius: 4px;
+    border: #184B9F 1px solid;
+}
+
+.cert_img {
+    position: absolute;
+    width: 220px;
+    height: 310px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: 0% 0% no-repeat padding-box;
+}
+
+/*************************** Map *****************************/
+#directions {
+    max-width: 1440px;
+    height: 1344px;
+    margin-left: 240px;
+    margin-bottom: 200px;
+}
+
+.direction-title p {
+    position: relative;
+    font: normal normal bold 40px/58px Noto Sans KR;
+    padding-top: 100px;
+}
+
+.direction-title span{
+    font: normal normal medium 18px/26px Noto Sans KR;
+    color: #C8C8C8;
+}
+
+.direction-title {
+    margin-bottom: 50px;
+}
+
+#map {
+    width: 1440px;
+    height: 910px;
+}
+
+#directions .cont .info .tel,
+#directions .cont .info .add{
+    height: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#directions .cont .info .tel .one,
+#directions .cont .info .add .one{
+    width: 230px;
+    margin-left: 150px;
+
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 1.2px;
+    line-height: 50px;
+    color: #1E1E1E;
+    text-align: center;
+}
+#directions .cont .info .tel .two,
+#directions .cont .info .add .two{
+    width: 1080px;
+    font-size: 20px;
+    line-height: 30px;
+    color: #959595;
+}
+
+#directions .cont .info .line {
+    position: absolute;
+    width: 1440px;
+    height: 1px;
+    background-color: #C8C8C8;
+}
+#directions .cont .info {
+    border-bottom: solid #C8C8C8;
+}
+
+/***************** footer ********************/
+.footer-wrap {
+    position: relative;
+    left: 0;
+    width: 1920px;
+    height: 250px;
+    background: #E9E9E9 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.footer-wrap img {
+    width:200px;
+    height:45px;
+    margin-top:50px;
+    margin-left:240px;
+}
+.footer-wrap .address {
+    letter-spacing: 0px;
+    line-height: 26px;
+    color: #9E9E9E;
+    opacity: 1;
+    text-align: left; 
+}
+.footer-wrap .address .footer-add {
+    position: relative;
+    height: 24px;
+    left: 460px;
+    bottom:20px;
+    font-size: 24px;
+}
+.footer-wrap .address .footer-inform {
+    position: relative;
+    margin-left: 240px;
+    padding-bottom: 49px;
+    height:76px;
+}
+.footer-wrap .address .footer-inform-add {
+    position:relative;
+    left: 1000px;
+    bottom: 50px;
+    height: 50px;
+    margin-top: -25px;
+}
+
+/************** media query 1. Header tablet ****************/
+@media (min-width: 769px) and (max-width: 1280px) {
+    /******* header *******/
+    header h1 a {    
+        margin-left: 231.07px;
+    }
+    header ul {
+        right: -115px;
+    }
+    header .nav {
+        letter-spacing: -2;
+    }
+    #company-header {
+        width: 1280px;
+        height: 300px;
+    }
+    #company-header h1 {
+        font-size: 40px;
+    }
+    .overlay-content:first-child {
+        margin-left: 598px;
+    }
+    .overlay-content:nth-child(2) {
+        margin-left: -16px;
+    }
+    .overlay-content:last-child {
+        margin-left: 14px;
+    }
+    
+    .overlay .mobile {
+        display: none;
+    }
+    .overlay .m-line {
+        display: none;
+    }
+
+/************** media query 2. Intoroduce tablet ****************/
+    .introduce-title {
+        margin-left: 140px;
+    }
+    .info-container {
+        margin-left: 140px;
+        width: 1000px;
+    }
+/************** media query 3. History tablet ****************/
+    .history-title p {
+        margin-left: 140px;
+    }
+    .history-title span {
+        margin-left: 155px;
+    }
+    .history-ul {
+        margin-left: 140px;
+    }
+    .history-ul li p {
+        letter-spacing: -1;
+        line-height: 4;
+    }
+    .mobile-h-p {
+        display: none;
+    }
+/************** media query 4. Organization tablet ****************/
+    #Organization-chart {
+        height: 1500px;
+        margin-bottom: 100px;
+    }
+    .Organization-title p {
+        margin-left: 140px;
+    }
+    .Organization-title span {
+        margin-left: 140px;
+    }
+    .Org-tree {
+        width: 500px;
+        height: 1156px;
+        margin-left: 390px;
+    }
+    .level-2-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0px;
+    }
+    /***** LEVEL-1 중앙 세로선 *****/
+    .level-1::before {
+        height: 70px;
+    }
+    /***** LEVEL-2 가로선 & 위치 *****/
+    .level-2-wrapper::before {
+        left: 20%;
+        width: 300px;
+    }
+    .level-2-wrapper li {
+        margin-right: 100px;
+    }
+    .level-2-wrapper > li.tab-345::before {
+        height: 0;
+    }
+    .Org-tree .department3,
+    .Org-tree .department4,
+    .Org-tree .department5
+     {
+        margin-top: -100px;
+    }
+    .level-3-desc {
+        margin-left: 0px;
+        font-size: 20px;
+        line-height: 1.8;
+        font-weight: bold;
+    }
+
+/************** media query 5. CERTIFICATION & PATENT tablet ****************/
+    #certification .cert_text .cert_p1 {
+        margin-left: 140px;
+    }
+
+    #certification .cert_text span{
+        margin-left: 140px;
+    }
+    .cert_container{
+        margin-left: 140px;
+    }
+/************** media query 6. DIRECTIONS tablet ****************/
+    #directions {
+        margin-bottom: 0px;
+    }
+    .direction-title {
+        margin-left: -100px;
+    }
+    #map {
+        width: 1000px;
+        height: 680px;
+        margin-left: -100px;
+    }
+    #directions .cont .info {
+       width: 1000px;
+       margin-left: -100px;
+    }
+    #directions .cont .info .line {
+        width: 1000px;
+    }
+    #directions .cont .info .tel {
+        margin-left: -200px;
+    }
+    #directions .cont .info .add {
+        margin-left: -210px;
+    }
+    
+/************** media query 4. footer tablet ****************/
+    .footer-wrap {
+        width: 1280px;
+    }
+    #footer .footer-logo {
+        margin-left: -157px;
+        width: 100%
+    }
+    .footer-wrap .address .footer-add {
+        margin-left: -157px;
+        font-size: 18px;
+    }
+    .footer-wrap .address .footer-inform {
+        margin-left: 83px;
+        text-rendering: optimizeSpeed;
+        letter-spacing: -1px;
+    }
+    .footer-wrap .address .footer-inform-add {
+        margin-left: -291px;
+        text-rendering: optimizeSpeed;
+        letter-spacing: -1px;
+    }
+}
+
+/***************************************** media query mobile ***************************************/
+@media (max-width: 768px) {
+    body {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        width: 100%;
+    }
+    body::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
+/************** media query 1.header mobile ****************/
+    header {
+        width: 768px;
+    }
+    header h1 a {    
+        margin-left: 52px;
+    }
+    header .nav a {
+        display: none;
+    }
+    header ul {
+        left: 458px;
+    }
+    .overlay {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+    .overlay::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
+    .overlay .mobile {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .overlay .m-line {
+        display: block;
+        padding: 0;
+        border-bottom: 1px solid #9E9E9E;
+        width: 768px;
+        margin-left: -275px;
+    }
+    .overlay-content {
+        letter-spacing: 0;
+    }
+    .overlay-content:first-child {
+        margin-left: 275px;
+    }
+    .overlay-content:nth-child(2) {
+        margin-left: 420px;
+        margin-top: -190px;
+    }
+    .overlay-content:last-child {
+        margin-left: 560px;
+        margin-top: -190px;
+    }
+    #company-header {
+        background: url(../img/mobile-company.png) no-repeat center;
+    }
+
+/************** media query 2.introduce mobile ****************/
+    .introduce-title .title-m {
+        margin-left: 60px;
+    }
+    .introduce-title .title-sub {
+        margin-left: 120px;
+    }
+    .info-container {
+        margin-left: 32px;
+        width: 704px;
+    }
+/************** media query 3.History mobile ****************/
+    #history {
+        height: 1494px;
+    }
+    .history-title p {
+        margin-left: 340px;
+    }
+    .history-title span {
+        margin-left: 355px;
+    }
+    .history-ul {
+        margin-left: 32px;
+        width: 704px;
+    }
+/******** 세로 라인 위치 *********/
+    .history-ul::before {
+        left: 33%;
+        margin-left: -2px;
+        padding: 20px 0;
+        height: 105%;
+        margin-top: 30px;
+    }
+/************ 세로라인 동그라미 만들기 ************/
+    .history-ul li h4::before {
+        content:""; 
+        position: absolute;
+        left: 31.7%; 
+        transform: translateY(60%);
+        border-radius: 100%;
+        background:#fff; 
+        border: 10px solid #184B9F;
+        box-sizing: border-box;
+    }    
+/************* 1,12,11,10,9,8,5 **************/
+    .history-ul li h4 {
+        text-align: right;
+        margin-right: 500px;
+    }
+    .history-ul li p {
+        display: none;
+    }
+    .history-ul .mobile-h-p {
+        display: block;
+        line-height: 1.5;
+        margin-bottom: 55px;
+        margin-top: -20px;
+        margin-left: 15px;
+    }
+
+/************** media query 4. Organization mobile ****************/
+    #Organization-chart {
+        width: 768px;
+        height: 1450px;        
+    }
+    .Organization-title p {
+        margin-left: 320px;
+        top: -50px;
+        margin-bottom: -50px;
+    }
+    .Organization-title span {
+        margin-left: 320px;
+    }
+    .Org-tree {
+        width: 500px;
+        height: 1156px;
+        margin-left: 134px;
+    }
+    .level-2-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0px;
+    }
+    /***** LEVEL-1 중앙 세로선 *****/
+    .level-1::before {
+        height: 70px;
+    }
+    /***** LEVEL-2 가로선 & 위치 *****/
+    .level-2-wrapper::before {
+        left: 20%;
+        width: 300px;
+    }
+    .level-2-wrapper li {
+        margin-right: 100px;
+    }
+    .level-2-wrapper > li.tab-345::before {
+        height: 0;
+    }
+    .Org-tree .department3,
+    .Org-tree .department4,
+    .Org-tree .department5
+     {
+        margin-top: -100px;
+    }
+    .level-3-desc {
+        margin-left: 0px;
+        font-size: 20px;
+        line-height: 1.8;
+        font-weight: bold;
+    }
+
+/************** media query 5. CERTIFICATION & PATENT mobile ****************/
+    #certification {
+        width: 768px;
+        height: 1105px;
+        margin-top: -10px;
+    }
+    #certification .cert_text .cert_p1 {
+        margin-left: 290px;
+    }
+    #certification .cert_text span{
+        margin-left: 290px;
+    }
+/********************** 특허 이미지 박스 ***********************/
+    .cert_container{
+        width: 100%;
+        height: 1110px;
+        margin-left: 400px;
+    }
+    .cert_li {
+        margin-bottom: 40px;
+    }
+/********************** 특허 이미지 **************************/
+    .cert_image_box {
+        width: 170px;
+        height: 230px;
+        margin-right: 800px;
+    }
+    .cert_img {
+        width: 160px;
+        height: 220px;
+    }
+
+/************** media query 6. DIRECTIONS tablet ****************/
+    #directions {
+        width: 100%;
+        height: 1144px;
+    }
+    .direction-title p {
+        margin-left: 70px;
+    }
+    .direction-title span {
+        margin-left: 100px;
+    }
+    #map {
+        width: 704px;
+        height: 680px;
+        margin-left: -210px;
+    }
+    #directions .cont .info {
+        width: 704px;
+        margin-left: -210px;
+    }
+    #directions .cont .info .tel {
+        margin-left: -180px;
+    }
+    #directions .cont .info .add {
+        margin-left: -190px;
+    }
+    #directions .cont .info .line {
+        width: 704px;
+    }
+
+/************** media query 4.footer mobile ****************/
+    #footer {
+        height: 341px;
+        background-color: #E9E9E9;
+    }
+    #footer .footer-logo {
+        margin-left: -157px;
+    }
+    .footer-wrap .address {
+        letter-spacing: -0.8;
+    }
+    .footer-wrap .address .footer-add {
+        margin-left: -157px;
+        font-size: 18px;
+    }
+    .footer-wrap .address .footer-inform {
+        margin-left: 83px;
+        line-height: 1.7;
+    }
+    .footer-wrap .address .footer-inform-add {
+        margin-left: -918px;
+        margin-top: 90px;
+        line-height: 1.7;
+    }
+}

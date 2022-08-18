@@ -1,0 +1,167 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+li {
+    list-style: none;
+}
+
+
+/********************************* 헤더부분 *************************************/
+header {
+    width: 100%;
+    height: 900px;
+    background: url("../img/Head-back-img.png") no-repeat center center/cover, rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    z-index: 1000;
+    top:0;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between; /* 양 끝으로 배치 */
+    align-items: center;
+    width: 100%;
+    border: 1px solid #ffff;
+    height: 80px;
+}
+
+header nav ul{
+    display: flex; /* 메뉴 가로 배치 */
+}
+
+header nav ul li{
+    padding: 2rem;
+}
+
+header button{
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    color: white;
+}
+
+/* 로고 */
+header h1 button{ 
+    font-weight: bold;
+    color: white;
+    margin-left: 360px;
+}
+header h1 button img {
+    width: 133px;
+    height: 30px;
+}
+
+/* 메뉴 */
+header nav ul li button {
+    font-size: 20px;
+}
+header nav ul li.btn button {
+    margin-right: 220px;
+    margin-left: 30px;
+    font-size: 32px;
+}
+
+
+.text-box {
+    position: relative;
+    height: 100%;
+}
+
+.hd-1 {
+    position: absolute;
+    top: 400px;
+    left: 240px;
+    color: #ffff;
+    letter-spacing: 0;
+    text-align: left;
+}
+
+.hd-1 p.main-text {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 140%;
+    margin-bottom: 50px;
+}
+
+.hd-1 p.sub-text {
+    word-break: normal;
+    font-size: 18px;
+    width: 60%;
+}
+
+.hd-1 img {
+    margin-top: 80px;
+    opacity: 0.5;
+}
+.hd-1 img.left{
+    width: 60px;
+    height: 40px;
+}
+.hd-1 img.center{
+    width: 15px;
+    height: 21px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.hd-1 img.right{
+    width: 60px;
+    height: 40px;
+}
+
+/* Hidden */
+.overlay {
+    height: 210px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 80px;
+    left: 0;
+    background-color: rgba(47, 88, 163, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    float: left;
+    top: 10%;
+    text-align: left;
+    margin-right: 50px;
+    margin-top: 15px;
+    line-height: 0.7;
+}
+.overlay-content:first-child {
+    margin-left: 1153px;
+}
+.overlay-content:nth-child(2) {
+    margin-left: -22px;
+}
+.overlay-content:last-child {
+    margin-left: 10px;
+}
+
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffff;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: black;
+}

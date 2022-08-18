@@ -1,0 +1,21 @@
+.to-right-underline{
+	position: relative;
+}
+.to-right-underline:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0px;
+    height: 5px;
+    margin: 5px 0 0;
+    transition: all 0.2s ease-in-out;
+    transition-duration: 0.3s;
+    border-radius: 3px;
+    opacity: 0;
+    background-color: blue;
+}
+.to-right-underline:hover:after{
+    width: 100%;
+    opacity: 1;
+}

@@ -1,0 +1,539 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+li {
+    list-style: none;
+}
+
+/****************************** TOP button ********************************/
+.topBtn{
+    position: fixed;
+    z-index: 999;
+    bottom: 7%;
+    right: 3%;
+    align-items: center;
+    display: none;
+}
+.topBtn .topBtn-a{
+    cursor: pointer;
+}
+.topBtn i{
+    font-size: 50px;
+    color: #184B9F;
+}
+
+/********************************* 헤더부분 *************************************/
+header {
+    width: 1920px;
+    z-index: 1000;
+    top:0;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between; /* 양 끝으로 배치 */
+    align-items: center;
+    width: 100%;
+    border: 1px solid #DBDBDB;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+header ul {
+    width: 648px;
+    position: relative;
+    margin-right: 126px;
+    height: 80px;
+}
+
+header ul li {
+    display: inline-block;
+}
+
+.nav {
+    display: inline-flex;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    padding: 0 20px;
+    top: -5px;
+}
+.nav-item {
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+    z-index: 1;
+    font-size: 20px;
+    font-weight: bolder;
+    position: relative;
+    margin-right: 68px;
+    margin-bottom: 10px;
+}
+
+.nav-item:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: -10%;
+    width: 100%;
+    height: 5px;
+    background-color: blue;
+    border-radius: 5px 5px 5px 5px;
+    opacity: 0;
+    transition: 0.5s;
+    margin-bottom: -10px;
+}
+
+.nav-item:not(.is-active):hover:before {
+    opacity: 1;
+    bottom: 0;
+    left: 1%;
+}
+
+.nav-item:not(.is-active):hover {
+    color: blue;
+}
+
+.nav-indicator {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    transition: 0.4s;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+header button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 32px;
+    margin-top: 17px;
+}
+
+/************************************* 로고 ****************************************/
+header h1 a { 
+    margin-left: 360px;
+}
+header h1 a img {
+    width: 133px;
+    height: 30px;
+}
+
+
+/********************* information-header ***********************/
+#information-header {
+    background: url(../img/information-header.png) no-repeat center;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+#information-header h1 {
+    color: white;
+}
+
+/************************** Hidden **************************/
+.overlay {
+    height: 210px;
+    width: 100%;
+    z-index: 1000;
+    top: 80px;
+    left: 0;
+    background-color: rgba(47, 88, 163, 0.7);
+    position: fixed;
+    display: none;
+}
+
+.overlay-content {
+    float: left;
+    top: 10%;
+    text-align: left;
+    margin-right: 50px;
+    margin-top: 15px;
+    line-height: 0.7;
+}
+.overlay-content:first-child {
+    margin-left: 1139px;
+}
+.overlay-content:nth-child(2) {
+    margin-left: -17px;
+}
+.overlay-content:last-child {
+    margin-left: 14px;
+}
+
+.overlay .mobile {
+    display: none;
+}
+.overlay .m-line {
+    display: none;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffff;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: black;
+}
+
+/************************** infomation **************************/
+#infomation {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+#infomation .title{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+#infomation .title :nth-child(1){
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 58px;
+    color: #1E1E1E;
+}
+#infomation .title :nth-child(2){
+    font-size: 18px;
+    line-height: 26px;
+    color: #C8C8C8;
+}
+
+#infomation .cont{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    grid-column-gap: 80px;
+    grid-row-gap: 50px;
+    margin-bottom: 100px;
+}
+
+#infomation a {
+    text-decoration: none;
+}
+#infomation button {
+    border: 0;
+    background-color: transparent;
+}
+#infomation img{
+    width: 680px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1px solid #707070;
+    transition-duration: 0.5s;
+}
+
+#infomation .img-box{
+    width: 680px;
+    height: 360px;
+    max-width: 680px;
+    max-height: 360px;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid #707070;
+}
+
+#infomation .text-box :nth-child(1){
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 29px;
+    color: #1E1E1E;
+}
+#infomation .text-box :nth-child(2){
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    line-height: 24px;
+    color: #C8C8C8;
+}
+
+.add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button{
+    width: 200px;
+    height: 73px;
+    border: 1px solid #1E1E1E;
+    border-radius: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.info-btn{
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 29px;
+    color: #1E1E1E;
+}
+
+#infomation a:hover img{
+    transform: scale(1.3);
+    filter: brightness(70%); 
+}
+#infomation a:hover .text-box :nth-child(1){
+    color: #184B9F;
+}
+
+.button:hover{
+    background-color: #184B9F;
+}
+
+.button:hover .info-btn{
+    color: #FFFFFF;
+}
+
+/***************** footer ********************/
+.footer-wrap {
+    position: relative;
+    left: 0;
+    width: 1920px;
+    height: 250px;
+    background: #E9E9E9 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.footer-wrap img {
+    width:200px;
+    height:45px;
+    margin-top:50px;
+    margin-left:240px;
+}
+.footer-wrap .address {
+    letter-spacing: 0px;
+    line-height: 26px;
+    color: #9E9E9E;
+    opacity: 1;
+    text-align: left; 
+}
+.footer-wrap .address .footer-add {
+    position: relative;
+    height: 24px;
+    left: 460px;
+    bottom:20px;
+    font-size: 24px;
+}
+.footer-wrap .address .footer-inform {
+    position: relative;
+    margin-left: 240px;
+    padding-bottom: 49px;
+    height:76px;
+}
+.footer-wrap .address .footer-inform-add {
+    position:relative;
+    left: 1000px;
+    bottom: 50px;
+    height: 50px;
+    margin-top: -25px;
+}
+
+/************** media query 1. Header tablet ****************/
+@media (min-width: 769px) and (max-width: 1280px) {
+    /******* header *******/
+    header h1 a {    
+        margin-left: 231.07px;
+    }
+    header ul {
+        right: -115px;
+    }
+    header .nav {
+        letter-spacing: -2;
+    }
+    #information-header {
+        width: 1280px;
+        height: 300px;
+    }
+    #information-header h1 {
+        font-size: 40px;
+    }
+    .overlay-content:first-child {
+        margin-left: 598px;
+    }
+    .overlay-content:nth-child(2) {
+        margin-left: -16px;
+    }
+    .overlay-content:last-child {
+        margin-left: 14px;
+    }
+    
+    .overlay .mobile {
+        display: none;
+    }
+    .overlay .m-line {
+        display: none;
+    }
+
+/************** media query 2. news tablet ****************/
+    #infomation {
+        width: 1280px;
+    }
+    #infomation .cont{
+        width: 100%;
+        grid-column-gap: 50px;
+        justify-content: center;
+    }
+    .card{
+        width: calc(100%/2 - 5%);
+    }
+    #infomation .img-box{
+        width: 100%;
+    }
+
+    #infomation .title {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    #infomation .text-box :nth-child(1) {
+        font-size: 25px;
+        letter-spacing: 1.2px;
+    }
+
+    #infomation .text-box :nth-child(2) {
+        font-size: 20px;
+        letter-spacing: 1px;
+        line-height: 50px;
+    }
+/************** media query 4. footer tablet ****************/
+    .footer-wrap {
+        width: 1280px;
+    }
+    #footer .footer-logo {
+        margin-left: -157px;
+        width: 100%
+    }
+    .footer-wrap .address .footer-add {
+        margin-left: -157px;
+        font-size: 18px;
+    }
+    .footer-wrap .address .footer-inform {
+        margin-left: 83px;
+        text-rendering: optimizeSpeed;
+        letter-spacing: -1px;
+    }
+    .footer-wrap .address .footer-inform-add {
+        margin-left: -291px;
+        text-rendering: optimizeSpeed;
+        letter-spacing: -1px;
+    }
+}
+
+
+/************** media query 1.header mobile ****************/
+@media (max-width: 768px) {
+    body {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        width: 100%;
+    }
+    body::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
+    /******* header *******/
+    header {
+        width: 768px;
+    }
+    header h1 a {    
+        margin-left: 52px;
+    }
+    header .nav a {
+        display: none;
+    }
+    header ul {
+        left: 458px;
+    }
+    .overlay {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+    .overlay::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
+    .overlay .mobile {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .overlay .m-line {
+        display: block;
+        padding: 0;
+        border-bottom: 1px solid #9E9E9E;
+        width: 768px;
+        margin-left: -275px;
+    }
+    .overlay-content {
+        letter-spacing: 0;
+    }
+    .overlay-content:first-child {
+        margin-left: 275px;
+    }
+    .overlay-content:nth-child(2) {
+        margin-left: 420px;
+        margin-top: -190px;
+    }
+    .overlay-content:last-child {
+        margin-left: 560px;
+        margin-top: -190px;
+    }
+/************** media query 2.information mobile ****************/
+    #infomation .title {
+        text-align: center;
+    }
+    #infomation .cont {
+        flex-direction: column;
+        align-content: center;
+    }
+
+/************** media query 3.footer mobile ****************/
+    #footer {
+        height: 341px;
+        background-color: #E9E9E9;
+    }
+    #footer .footer-logo {
+        margin-left: -157px;
+    }
+    .footer-wrap .address {
+        letter-spacing: -0.8;
+    }
+    .footer-wrap .address .footer-add {
+        margin-left: -157px;
+        font-size: 18px;
+    }
+    .footer-wrap .address .footer-inform {
+        margin-left: 83px;
+        line-height: 1.7;
+    }
+    .footer-wrap .address .footer-inform-add {
+        margin-left: -918px;
+        margin-top: 90px;
+        line-height: 1.7;
+    }
+}
